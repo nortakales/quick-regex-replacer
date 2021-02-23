@@ -3,23 +3,127 @@
 	"displayName": "Quick Regex Replacer",
 	"description": "Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access. For example, if your log files contain stack traces on a single line where newlines are delimited by |, you could set a regex to replace | with newline to format the stack trace for readability.",
 	"version": "0.0.1",
+	"publisher": "nortakales",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"bugs": {
+		"url": "https://github.com/nortakales/quick-regex-replacer/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nortakales/quick-regex-replacer.git"
+	},
 	"activationEvents": [
-		"onCommand:quick-regex-replacer.helloWorld"
+		"onCommand:quickRegexReplacer.replace.alpha",
+		"onCommand:quickRegexReplacer.replace.beta",
+		"onCommand:quickRegexReplacer.replace.gamma",
+		"onCommand:quickRegexReplacer.replace.delta",
+		"onCommand:quickRegexReplacer.replace.epsilon"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": {
+			"title": "Quick Regex Replacer",
+			"properties": {
+				"quickRegexReplacer.alpha.regex": {
+					"type": "string",
+					"default": "[ \\t]*\\|[ \\t]*",
+					"description": "Regular expression used to match text that will be replaced by `#quickRegexReplacer.alpha.replacement#` text. The same applies to Beta, Gamma, and so on."
+				},
+				"quickRegexReplacer.alpha.replacement": {
+					"type": "string",
+					"default": "\\n    ",
+					"markdownDescription": "Replacement text that will replace all occurences of `#quickRegexReplacer.alpha.regex#`. The same applies to Beta, Gamma, and so on."
+				},
+				"quickRegexReplacer.beta.regex": {
+					"type": "string"
+				},
+				"quickRegexReplacer.beta.replacement": {
+					"type": "string"
+				},
+				"quickRegexReplacer.gamma.regex": {
+					"type": "string"
+				},
+				"quickRegexReplacer.gamma.replacement": {
+					"type": "string"
+				},
+				"quickRegexReplacer.delta.regex": {
+					"type": "string"
+				},
+				"quickRegexReplacer.delta.replacement": {
+					"type": "string"
+				},
+				"quickRegexReplacer.epsilon.regex": {
+					"type": "string"
+				},
+				"quickRegexReplacer.epsilon.replacement": {
+					"type": "string"
+				}
+			}
+		},
 		"commands": [
 			{
-				"command": "quick-regex-replacer.helloWorld",
-				"title": "Hello World"
+				"command": "quickRegexReplacer.replace.alpha",
+				"title": "Replace Alpha",
+				"category": "Quick Regex Replacer"
+			},
+			{
+				"command": "quickRegexReplacer.replace.beta",
+				"title": "Replace Beta",
+				"category": "Quick Regex Replacer"
+			},
+			{
+				"command": "quickRegexReplacer.replace.gamma",
+				"title": "Replace Gamma",
+				"category": "Quick Regex Replacer"
+			},
+			{
+				"command": "quickRegexReplacer.replace.delta",
+				"title": "Replace Delta",
+				"category": "Quick Regex Replacer"
+			},
+			{
+				"command": "quickRegexReplacer.replace.epsilon",
+				"title": "Replace Epsilon",
+				"category": "Quick Regex Replacer"
 			}
-		]
+		],
+		"keybindings": [
+			{
+			  "command": "quickRegexReplacer.replace.alpha",
+			  "key": "ctrl+r 1",
+			  "mac": "cmd+r 1",
+			  "when": "editorTextFocus"
+			},
+			{
+			  "command": "quickRegexReplacer.replace.beta",
+			  "key": "ctrl+r 2",
+			  "mac": "cmd+r 2",
+			  "when": "editorTextFocus"
+			},
+			{
+			  "command": "quickRegexReplacer.replace.gamma",
+			  "key": "ctrl+r 3",
+			  "mac": "cmd+r 3",
+			  "when": "editorTextFocus"
+			},
+			{
+			  "command": "quickRegexReplacer.replace.delta",
+			  "key": "ctrl+r 4",
+			  "mac": "cmd+r 4",
+			  "when": "editorTextFocus"
+			},
+			{
+			  "command": "quickRegexReplacer.replace.epsilon",
+			  "key": "ctrl+r 5",
+			  "mac": "cmd+r 5",
+			  "when": "editorTextFocus"
+			}
+		  ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

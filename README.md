@@ -1,70 +1,39 @@
-# quick-regex-replacer README
+# Quick Regex Replacer
 
-This is the README for your extension "quick-regex-replacer". After writing up a brief description, we recommend including the following sections.
+This is a VSCode extension that allows you to bind your most frequently used find/replace operations to keybindings/command palette for quick access.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access. For example, if your log files contain stack traces on a single line where newlines are delimited by |, you could set a regex to replace | with newline to format the stack trace for readability. This is the default "Alpha" regex/replacement set in the configuration as an example.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension uses pairs of settings for each regex/replacement that you can configure.
 
-For example:
+* `quickRegexReplacer.alpha.regex`: All matches for this regex will be replaced with the text you set in `quickRegexReplacer.alpha.replacement`
+* `quickRegexReplacer.alpha.replacement`: This text will replace all matches of `quickRegexReplacer.alpha.regex`
 
-This extension contributes the following settings:
+Notice the use of `alpha` in those settings. This extension allows up to 5 regex/replacement configurations denoted as:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+1. `alpha`
+1. `beta`
+1. `gamma`
+1. `delta`
+1. `epsilon`
+
+Each of the above find/replace configurations are triggered through the equivalent command: `quickRegexReplacer.replace.alpha` and so on.
+
+Default keymappings are `Ctrl+R` then `1` through `5`
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+None yet
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### [1.0] - 2021/2/22
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Initial release
+- Ability to set up to 5 regex quick replaces
+- Replace will take place within a selection only if one exists
+- Hot keys are `Ctrl+R` then `1` through `5`
