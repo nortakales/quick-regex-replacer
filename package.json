@@ -33,15 +33,14 @@
 				"quickRegexReplacer.alpha.regex": {
 					"type": "string",
 					"default": "[ \\t]*\\|[ \\t]*",
-					"markdownDescription": "Regular expression used to match text that will be replaced by `#quickRegexReplacer.alpha.replacement#` text. The same applies to Beta, Gamma, and so on.",
-					"description": "Regular expression used to match text that will be replaced by \"quickRegexReplacer.alpha.replacement\" text. The same applies to Beta, Gamma, and so on."
+					"description": "Regular expression used to match text that will be replaced by \"quickRegexReplacer.alpha.replacement\" text. The same applies to Beta, Gamma, and so on.",
+					"markdownDescription": "Regular expression used to match text that will be replaced by `#quickRegexReplacer.alpha.replacement#` text. The same applies to Beta, Gamma, and so on."
 				},
 				"quickRegexReplacer.alpha.replacement": {
 					"type": "string",
 					"default": "\\n    ",
+					"description": "Replacement text that will replace all occurences of \"quickRegexReplacer.alpha.regex\". The same applies to Beta, Gamma, and so on.",
 					"markdownDescription": "Replacement text that will replace all occurences of `#quickRegexReplacer.alpha.regex#`. The same applies to Beta, Gamma, and so on."
-					,
-					"description": "Replacement text that will replace all occurences of \"quickRegexReplacer.alpha.regex\". The same applies to Beta, Gamma, and so on."
 				},
 				"quickRegexReplacer.beta.regex": {
 					"type": "string"
