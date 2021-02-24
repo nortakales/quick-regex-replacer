@@ -7,7 +7,7 @@
 - Replace will take place within a selection only if one exists
 - Hot keys are `Ctrl+R` then `1` through `5`
 
-### [1.0.1] - 2021/2/23
+### [1.0.2] - 2021/2/23
 
 - Updated README
 - Updated property description

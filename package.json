@@ -2,7 +2,7 @@
 	"name": "quick-regex-replacer",
 	"displayName": "Quick Regex Replacer",
 	"description": "Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "nortakales",
 	"engines": {
 		"vscode": "^1.53.0"
