@@ -11,7 +11,7 @@
 		"Snippets",
 		"Other"
 	],
-	"icon": "resources/quick-regex-replacer.png",
+	"icon": "resources/readme/quick-regex-replacer.png",
 	"bugs": {
 		"url": "https://github.com/nortakales/quick-regex-replacer/issues"
 	},
