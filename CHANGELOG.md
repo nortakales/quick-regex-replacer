@@ -11,3 +11,9 @@
 
 - Updated README
 - Updated property description
+
+### [1.0.4] - 2021/2/26
+
+- Code refactor
+- Added extension icon
+- Added ability to leave replacement setting blank

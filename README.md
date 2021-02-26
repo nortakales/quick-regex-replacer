@@ -4,7 +4,7 @@ This is a VSCode extension that allows you to bind your most frequently used fin
 
 ## Features
 
-Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access. For example, if your log files contain stack traces on a single line where newlines are delimited by |, you could set a regex to replace | with newline to format the stack trace for readability. This is the default "Alpha" regex/replacement set in the configuration as an example.
+Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access. For example, if your log files contain stack traces on a single line where newlines are delimited by pipe (|), you could set a regex to replace | with \n to format the stack trace for readability. This example is the default "Alpha" regex/replacement set in the configuration.
 
 ![Example usage](resources/readme/example.gif)
 
@@ -27,6 +27,8 @@ Each of the above find/replace configurations are triggered through the equivale
 
 Default keymappings are `Ctrl+R` then `1` through `5`
 
+A regex is mandatory for triggering a find/replace, however you can leave the replacement setting blank, which effectively becomes a quick way to remore all ocurrences of your regex.
+
 ## Known Issues
 
 None yet
@@ -44,3 +46,9 @@ None yet
 
 - Updated README
 - Updated property description
+
+### [1.0.4] - 2021/2/26
+
+- Code refactor
+- Added extension icon
+- Added ability to leave replacement setting blank

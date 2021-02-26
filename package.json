@@ -2,7 +2,7 @@
 	"name": "quick-regex-replacer",
 	"displayName": "Quick Regex Replacer",
 	"description": "Configure frequently used find/replace regexs that you can bind to keystrokes or invoke via command palette for quick access",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "nortakales",
 	"engines": {
 		"vscode": "^1.53.0"
@@ -11,6 +11,7 @@
 		"Snippets",
 		"Other"
 	],
+	"icon": "resources/quick-regex-replacer.png",
 	"bugs": {
 		"url": "https://github.com/nortakales/quick-regex-replacer/issues"
 	},
@@ -33,14 +34,14 @@
 				"quickRegexReplacer.alpha.regex": {
 					"type": "string",
 					"default": "[ \\t]*\\|[ \\t]*",
-					"description": "Regular expression used to match text that will be replaced by \"quickRegexReplacer.alpha.replacement\" text. The same applies to Beta, Gamma, and so on.",
-					"markdownDescription": "Regular expression used to match text that will be replaced by `#quickRegexReplacer.alpha.replacement#` text. The same applies to Beta, Gamma, and so on."
+					"description": "Regular expression used to match text that will be replaced by \"quickRegexReplacer.alpha.replacement\". The same applies to Beta, Gamma, and so on.",
+					"markdownDescription": "Regular expression used to match text that will be replaced by `#quickRegexReplacer.alpha.replacement#`. The same applies to Beta, Gamma, and so on."
 				},
 				"quickRegexReplacer.alpha.replacement": {
 					"type": "string",
 					"default": "\\n    ",
-					"description": "Replacement text that will replace all occurences of \"quickRegexReplacer.alpha.regex\". The same applies to Beta, Gamma, and so on.",
-					"markdownDescription": "Replacement text that will replace all occurences of `#quickRegexReplacer.alpha.regex#`. The same applies to Beta, Gamma, and so on."
+					"description": "Replacement text that will replace all occurences of \"quickRegexReplacer.alpha.regex\". The same applies to Beta, Gamma, and so on. If not provided, this will be considered an empty string (all ocurrences of your regex will be replaced with an empty string, effectively removing those occurences)",
+					"markdownDescription": "Replacement text that will replace all occurences of `#quickRegexReplacer.alpha.regex#`. The same applies to Beta, Gamma, and so on. If not provided, this will be considered an empty string (all ocurrences of your regex will be replaced with an empty string, effectively removing those occurences)"
 				},
 				"quickRegexReplacer.beta.regex": {
 					"type": "string"
